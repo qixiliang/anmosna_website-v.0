@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 安梦娜家居</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e91e63',
+                        secondary: '#f8bbd0',
+                        dark: '#333333',
+                        light: '#f5f5f5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .transition-custom {
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-light">
+    <!-- 导航栏 -->
+    <nav id="navbar" class="fixed w-full bg-white/95 shadow-md z-50 transition-custom">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/anmosna_logo.png" alt="安梦娜标志" class="h-10 mr-3">
+                <div>
+                    <h1 class="text-primary text-xl font-bold">安夢娜</h1>
+                    <p class="text-xs text-gray-500">健康时尚家居</p>
+                </div>
+            </div>
+            <!-- 桌面导航 -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-dark hover:text-primary transition-custom font-medium">首页</a>
+                <a href="about.html" class="text-dark hover:text-primary transition-custom font-medium">关于我们</a>
+                <a href="products.html" class="text-dark hover:text-primary transition-custom font-medium">产品中心</a>
+                <a href="honors.html" class="text-dark hover:text-primary transition-custom font-medium">荣誉资质</a>
+                <a href="contact.html" class="text-dark hover:text-primary transition-custom font-medium">联系我们</a>
+            </div>
+            <!-- 移动端菜单按钮 -->
+            <button id="menuBtn" class="md:hidden text-dark text-2xl focus:outline-none">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <!-- 移动端导航菜单 -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white w-full border-t border-gray-200">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="index.html" class="text-dark hover:text-primary py-2 transition-custom font-medium">首页</a>
+                <a href="about.html" class="text-dark hover:text-primary py-2 transition-custom font-medium">关于我们</a>
+                <a href="products.html" class="text-dark hover:text-primary py-2 transition-custom font-medium">产品中心</a>
+                <a href="honors.html" class="text-dark hover:text-primary py-2 transition-custom font-medium">荣誉资质</a>
+                <a href="contact.html" class="text-dark hover:text-primary py-2 transition-custom font-medium">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 公司简介 -->
+    <section id="company-intro" class="py-24 bg-white pt-32">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-6">公司简介</h2>
+                    <div class="w-20 h-1 bg-primary mb-8"></div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        深圳市安梦娜家居科技有限公司成立于1998年，是一家集研发、生产、销售为一体的专业家居用品企业。经过27年的稳健发展，公司已成为家居行业的知名品牌，产品畅销国内外市场。
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        公司秉承"健康、时尚、品质"的设计理念，致力于为消费者提供高品质的家居产品。我们拥有一支专业的研发团队，不断创新产品设计，满足不同消费者的需求。同时，公司注重产品质量，建立了严格的质量控制体系，确保每一件产品都符合国家标准和行业规范。
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <div class="flex items-center">
+                            <div class="text-primary text-3xl font-bold mr-3">27+</div>
+                            <div class="text-gray-600">
+                                <div class="font-medium">发展年限</div>
+                                <div class="text-sm">始于1998年</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-primary text-3xl font-bold mr-3">500+</div>
+                            <div class="text-gray-600">
+                                <div class="font-medium">员工数量</div>
+                                <div class="text-sm">专业团队</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-primary text-3xl font-bold mr-3">100+</div>
+                            <div class="text-gray-600">
+                                <div class="font-medium">产品系列</div>
+                                <div class="text-sm">丰富选择</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="https://picsum.photos/id/1076/600/400" alt="公司办公环境" class="rounded-lg shadow-md w-full h-48 object-cover transform hover:scale-105 transition-custom">
+                    <img src="https://picsum.photos/id/1077/600/400" alt="公司生产基地" class="rounded-lg shadow-md w-full h-48 object-cover mt-8 transform hover:scale-105 transition-custom">
+                    <img src="https://picsum.photos/id/1078/600/400" alt="公司产品展示" class="rounded-lg shadow-md w-full h-48 object-cover transform hover:scale-105 transition-custom">
+                    <img src="https://picsum.photos/id/1079/600/400" alt="公司团队" class="rounded-lg shadow-md w-full h-48 object-cover mt-8 transform hover:scale-105 transition-custom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 发展历程 -->
+    <section id="development-history" class="py-24 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">发展历程</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    27年风雨兼程，安梦娜家居从创立到发展壮大，始终坚持品质至上，不断创新突破
+                </p>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto">
+                <!-- 时间线 -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/20"></div>
+
+                <!-- 时间点1 -->
+                <div class="relative z-10 mb-16 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 text-right mb-8 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2">1998年</h3>
+                        <p class="text-gray-600">
+                            公司成立，专注于家居用品的研发与生产，推出首个床上用品系列
+                        </p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center z-20">
+                        <span class="text-white font-bold">1</span>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                </div>
+
+                <!-- 时间点2 -->
+                <div class="relative z-10 mb-16 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center z-20">
+                        <span class="text-white font-bold">2</span>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 text-left mb-8 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2">2005年</h3>
+                        <p class="text-gray-600">
+                            扩大生产规模，建立现代化生产基地，引入先进生产设备和管理体系
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 时间点3 -->
+                <div class="relative z-10 mb-16 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 text-right mb-8 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2">2010年</h3>
+                        <p class="text-gray-600">
+                            推出家居服饰系列，拓展产品品类，开始布局全国市场
+                        </p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center z-20">
+                        <span class="text-white font-bold">3</span>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                </div>
+
+                <!-- 时间点4 -->
+                <div class="relative z-10 mb-16 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center z-20">
+                        <span class="text-white font-bold">4</span>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 text-left mb-8 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2">2015年</h3>
+                        <p class="text-gray-600">
+                            推出箱包系列和智能设备系列，产品体系更加完善，开始拓展国际市场
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 时间点5 -->
+                <div class="relative z-10 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 text-right mb-8 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2">2023年</h3>
+                        <p class="text-gray-600">
+                            品牌全面升级，强化线上线下融合发展，致力于成为家居行业领导品牌
+                        </p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center z-20">
+                        <span class="text-white font-bold">5</span>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业文化 -->
+    <section id="corporate-culture" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">企业文化</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    我们的企业文化是公司发展的灵魂，指引着我们不断前进
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 企业使命 -->
+                <div class="bg-light rounded-lg p-8 shadow-md hover:shadow-xl transition-custom">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fa fa-bullseye text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">企业使命</h3>
+                    <p class="text-gray-600 text-center">
+                        为消费者创造健康、舒适、时尚的家居生活，让每一个家庭都能享受高品质的家居产品
+                    </p>
+                </div>
+
+                <!-- 企业愿景 -->
+                <div class="bg-light rounded-lg p-8 shadow-md hover:shadow-xl transition-custom">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fa fa-lightbulb-o text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">企业愿景</h3>
+                    <p class="text-gray-600 text-center">
+                        成为家居行业的领导品牌，引领健康、时尚的家居生活方式
+                    </p>
+                </div>
+
+                <!-- 核心价值观 -->
+                <div class="bg-light rounded-lg p-8 shadow-md hover:shadow-xl transition-custom">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fa fa-heart text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">核心价值观</h3>
+                    <p class="text-gray-600 text-center">
+                        诚信为本，品质至上，创新驱动，合作共赢，服务社会
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="images/anmosna_logo.png" alt="安梦娜标志" class="h-10 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">安夢娜</h3>
+                            <p class="text-xs text-gray-400">健康时尚家居</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">
+                        深圳市安梦娜家居科技有限公司，专注于高品质家居产品的研发与生产，为您打造健康、时尚的家居生活。
+                    </p>
+                    <div class="flex space-x-4">
+    <!-- 微信二维码弹窗 -->
+    <button onclick="showWechatQR()" class="text-gray-400 hover:text-white transition-custom">
+        <i class="fa fa-weixin"></i>
+    </button>
+    
+    <!-- 微博（直接链接） -->
+    <a href="https://weibo.com/yourcompany" 
+       target="_blank" 
+       class="text-gray-400 hover:text-white transition-custom">
+        <i class="fa fa-weibo"></i>
+    </a>
+    
+    <!-- 淘宝店铺 -->
+    <a href="https://yourcompany.taobao.com" 
+       target="_blank" 
+       class="text-gray-400 hover:text-white transition-custom">
+        <!-- 淘宝图标需要自定义，Font Awesome没有淘宝图标 -->
+        <i class="fa fa-shopping-cart"></i>
+    </a>
+    
+    <!-- LinkedIn（如果有的话） -->
+    <!-- <a href="https://linkedin.com/company/yourcompany" 
+       target="_blank" 
+       class="text-gray-400 hover:text-white transition-custom">
+        <i class="fa fa-linkedin"></i>
+    </a> -->
+</div>
+
+<!-- 微信二维码弹窗 -->
+<div id="wechatModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-xl">
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-lg font-bold text-black">关注我们的微信公众号</h3>
+            <button onclick="hideWechatQR()" class="text-2xl text-black hover:text-primary transition-colors duration-200">&times;</button>
+        </div>
+        <img src="images/wechat_qr.png" alt="微信公众号二维码" class="w-64 h-64">
+        <p class="text-center mt-2 text-sm text-gray-600">扫码关注</p>
+    </div>
+</div>
+
+<script>
+function showWechatQR() {
+    document.getElementById('wechatModal').classList.remove('hidden');
+}
+function hideWechatQR() {
+    document.getElementById('wechatModal').classList.add('hidden');
+}
+</script>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">快速链接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-custom">首页</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-custom">关于我们</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white transition-custom">产品中心</a></li>
+                        <li><a href="honors.html" class="text-gray-400 hover:text-white transition-custom">荣誉资质</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-custom">联系我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">产品系列</h4>
+                    <ul class="space-y-2">
+                        <li><a href="product-details.html#bedding-details" class="text-gray-400 hover:text-white transition-custom">床上用品</a></li>
+                        <li><a href="product-details.html#clothing-details" class="text-gray-400 hover:text-white transition-custom">家居服饰</a></li>
+                        <li><a href="product-details.html#bags-details" class="text-gray-400 hover:text-white transition-custom">箱包系列</a></li>
+                        <li><a href="product-details.html#smart-devices-details" class="text-gray-400 hover:text-white transition-custom">智能设备</a></li>
+                        <li><a href="all-products.html" class="text-gray-400 hover:text-white transition-custom">全部产品</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">联系我们</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mt-1 mr-2"></i>
+                            <span>深圳市龙岗区布吉街道锦龙路万科红大厦1栋4楼</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone mr-2"></i>
+                            <span>(0755) 86001666</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope mr-2"></i>
+                            <span>1145215681@qq.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2023 深圳市安梦娜家居科技有限公司 版权所有 | 粤ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 微信二维码弹窗 -->
+    <div id="wechatQRModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg shadow-xl text-center">
+            <h3 class="text-xl font-bold mb-4">关注我们的微信</h3>
+            <img src="images/wechat_qr.jpg" alt="微信二维码" class="w-64 h-64 mx-auto mb-4">
+            <p class="text-gray-600 mb-4">扫码关注获取更多优惠信息</p>
+            <button onclick="hideWechatQR()" class="bg-primary text-white px-6 py-2 rounded-md hover:bg-primary-dark transition-custom">
+                关闭
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'shadow-lg');
+                navbar.classList.remove('py-3', 'shadow-md');
+            } else {
+                navbar.classList.add('py-3', 'shadow-md');
+                navbar.classList.remove('py-2', 'shadow-lg');
+            }
+        });
+
+        // 移动端菜单切换
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // 关闭移动端菜单
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+            });
+        });
+
+        // 微信二维码弹窗功能
+        function showWechatQR() {
+            const modal = document.getElementById('wechatQRModal');
+            modal.classList.remove('hidden');
+        }
+
+        function hideWechatQR() {
+            const modal = document.getElementById('wechatQRModal');
+            modal.classList.add('hidden');
+        }
+
+        // 点击弹窗外部关闭弹窗
+        document.getElementById('wechatQRModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                hideWechatQR();
+            }
+        });
+    </script>
+</body>
+</html>
